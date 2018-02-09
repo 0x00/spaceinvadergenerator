@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>space invader generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/png" />
+    <link rel="icon" href="favicon.png" type="image/png" />
+
+    <link rel="icon" sizes="192x192" href="favicon192.png">
+    <link rel="icon" sizes="128x128" href="favicon128.png">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
+
+    <link rel="apple-touch-icon" sizes="128x128" href="favicon128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="favicon128.png">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <style>
+      body{
+        margin: 0px;
+        padding: 0px;
+        overflow: hidden;
+        font-family: "Arial, Helvetica", sans-serif;
+        background: black;
+        color: white;
+      }
+
+      .wall{
+        background: red;
+        height: 100%;
+        width: 100%;
+      }
+
+      .panel{
+        background: black;
+        padding: 5px;
+        color: white;
+      }
+
+
+      .panel input, select, a{
+        color: white;
+        background: black;
+        padding: 5px;
+        border: 1px #49f solid;
+        margin: 5px;
+        display: inline-block;
+      }
+
+      .panel input{
+        padding: 6px;
+      }
+
+      .panel a{
+        padding: 4px;
+      }
+      @media all and (display-mode: standalone) {
+        #dwnld {
+          display: none;
+        }
+      }
+    </style>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@robofarm">
+    <meta name="twitter:creator" content="@robofarm">
+    <meta name="twitter:title" content="space invader generator">
+    <meta name="twitter:description" content="a space invader generator">
+    <meta name="twitter:image" content="https://felix.city/spaceinvader/shot.png">
+
+  </head>
+  <body>
+    <div class="panel">
+      <input id="seed" step="1" type="number" placeholder="Seed here">
+      <select id="size">
+        <option value="5">5x5</option>
+        <option value="7" selected>7x7</option>
+        <option value="9">9x9</option>
+      </select>
+      <select id="scale">
+        <option value="2">2x</option>
+        <option value="4">4x</option>
+        <option value="8" selected>8x</option>
+        <option value="16">16x</option>
+        <option value="32">32x</option>
+      </select>
+      <a id="dwnld" href="#">Download</a>
+
+    </div>
+    <canvas class="wall" id="wall"></canvas>
+    <script src="space.js" async></script>
+  </body>
+</html>
